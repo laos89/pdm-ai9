@@ -1,0 +1,140 @@
+[
+  {
+    "nombre": "Iron Man",
+    "edad": "31",
+    "altura": "172",
+    "genero": "masculino",
+    "foto":"https://cdna.artstation.com/p/assets/images/images/035/721/708/large/daniela-matsuura-marvel-iron-man-01.jpg?1615733477"
+  },
+  {
+    "nombre": "Vision",
+    "edad": "3",
+    "altura": "182",
+    "genero": "masculino",
+    "foto":"https://i.etsystatic.com/8200587/r/il/f5e68a/1530308635/il_fullxfull.1530308635_tgam.jpg"
+  },
+  {
+    "nombre": "Thor",
+    "edad": "100",
+    "altura": "190",
+    "genero": "masculino",
+    "foto":"https://images-platform.99static.com/jKIUoA61qTrNrZlWwril1I8Quqs=/88x97:1912x1921/500x500/top/smart/99designs-contests-attachments/105/105781/attachment_105781910"
+  },
+  {
+    "nombre": "Hulk",
+    "edad": "25",
+    "altura": "210",
+    "genero": "masculino",
+    "foto":"https://bandai.com.mx/blog/wp-content/uploads/2019/08/Logo-Hulk.jpg"
+  },
+  {
+    "nombre": "Viuda negra",
+    "edad": "33",
+    "altura": "170",
+    "genero": "femenino",
+    "foto":"https://i.pinimg.com/originals/c7/a9/a8/c7a9a8e87709cdc4171e0188b5373d4d.jpg"
+  },
+  {
+    "nombre": "Spider Man",
+    "edad": "16",
+    "altura": "166",
+    "genero": "masculino",
+    "foto":"https://i.pinimg.com/originals/c5/a9/b8/c5a9b84ff1e453186a57b2a493964064.jpg"
+  },
+  {
+    "nombre": "Bruja Escarlata",
+    "edad": "31",
+    "altura": "165",
+    "genero": "femenino",
+    "foto":"https://ae01.alicdn.com/kf/U3fbaa9c547aa40ddbb300bf809898e47O/Calcoman-as-de-vinilo-con-logotipo-de-bruja-escarlata-para-ni-as-decoraci-n-para-ordenador.jpg_640x640.jpg"
+  },
+  {
+    "nombre": "Hawk Eye",
+    "edad": "31",
+    "altura": "170",
+    "genero": "masculino",
+    "foto":"https://i.pinimg.com/originals/9c/7f/07/9c7f07934174c093a4ce18946f9e9945.jpg"
+  },
+  {
+    "nombre": "Capitan America",
+    "edad": "80",
+    "altura": "172",
+    "genero": "masculino",
+    "foto":"https://ar.pinterest.com/pin/819232988459678701/"
+  },
+  {
+    "nombre": "Winter Soldier",
+    "edad": "31",
+    "altura": "169",
+    "genero": "masculino",
+    "foto":"https://seeklogo.com/images/W/winter-soldier-logo-649A981193-seeklogo.com.png"
+  },{
+  "nombre": "Falcon",
+  "edad": "25",
+  "altura": "165",
+  "genero": "masculino",
+  "foto":"https://wallpaperaccess.com/full/6820469.jpg"
+},{
+  "nombre": "Ant-Man",
+  "edad": "35",
+  "altura": "178",
+  "genero": "masculino",
+  "foto":"https://i.pinimg.com/originals/72/9c/72/729c7266379cb5c204fe5b167341fd16.png"
+},
+  {
+    "nombre": "Wasp",
+    "edad": "31",
+    "altura": "160",
+    "genero": "femenino",
+    "foto":"https://i.pinimg.com/736x/a9/98/64/a998649a1ae1b9bdb59b311dbfc75664.jpg"
+  },
+  {
+    "nombre": "Pantera Negra",
+    "edad": "31",
+    "altura": "170",
+    "genero": "masculino",
+    "foto":"https://wallpaperaccess.com/full/1238963.jpg"
+  },
+  {
+    "nombre": "Doctor Strange",
+    "edad": "40",
+    "altura": "171",
+    "genero": "masculino",
+    "foto":"https://p4.wallpaperbetter.com/wallpaper/855/858/352/movie-doctor-strange-marvel-comics-hd-wallpaper-preview.jpg"
+  },
+  {
+    "nombre": "Wolverine",
+    "edad": "45",
+    "altura": "166",
+    "genero": "masculino",
+    "foto":"https://www.logolynx.com/images/logolynx/68/683753a33841cfdb5b32ff044d25f7ac.png"
+  },
+  {
+    "nombre": "Deadpool",
+    "edad": "30",
+    "altura": "170",
+    "genero": "masculino",
+    "foto":"https://i.pinimg.com/originals/dc/be/80/dcbe8061a60da1ee10dcba4f0adcef66.jpg"
+  },
+  {
+    "nombre": "Capitana Marvel",
+    "edad": "31",
+    "altura": "168",
+    "genero": "femenino",
+    "foto":"https://i.pinimg.com/originals/61/df/0e/61df0e4d118e55d32751f8fc285be77c.jpg"
+  },
+  {
+    "nombre": "La mole",
+    "edad": "33",
+    "altura": "190",
+    "genero": "masculino",
+    "foto":"https://static.wikia.nocookie.net/marvelall/images/9/94/La_mole.jpg/revision/latest?cb=20130827212030&path-prefix=es"
+  },
+  {
+    "nombre": "Ciclope",
+    "edad": "24",
+    "altura": "170",
+    "genero": "masculino",
+    "foto":"https://i.pinimg.com/736x/c0/9a/ed/c09aed67998495bc9c8e67667d26e843.jpg"
+  }
+]

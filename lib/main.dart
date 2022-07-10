@@ -1,64 +1,60 @@
-import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:async';
 import 'dart:convert';
 
 void main() {
-  runApp(Myapp());
+  runApp(MyApp());
 }
 
-class Myapp extends StatelessWidget {
-  const Myapp({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Homepage(),
+      home: HomePage(),
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
     );
   }
 }
 
-class Homepage extends StatefulWidget {
-  const Homepage({Key? key}) : super(key: key);
-
+class HomePage extends StatefulWidget {
   @override
-  State<Homepage> createState() => _HomepageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _HomepageState extends State<Homepage> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personajes desde JSON"),
+        title: const Text("ai8 Json superheroes"),
         centerTitle: true,
       ),
       body: Container(
         child: FutureBuilder(
           future:
-          DefaultAssetBundle.of(context).loadString("assets/datos.json"),
+              DefaultAssetBundle.of(context).loadString("assets/datos.json"),
           builder: (context, snapshot) {
             var jsonData = json.decode(snapshot.data.toString());
-            return ListView.builder(
+            return new ListView.builder(
                 itemBuilder: (BuildContext context, int index) {
                   return Card(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         CustomList(
-                          imagen: CircleAvatar(
+                          foto: CircleAvatar(
                             backgroundImage: NetworkImage(
-                                jsonData[index]['imagen'].toString()),
+                                jsonData[index]["foto"].toString()),
                           ),
-                          Nombre: jsonData[index]["Nombre"].toString(),
-                          identidadSecreta:
-                          jsonData[index]["identidadSecreta"].toString(),
-                          descripcion:
-                          jsonData[index]["descripcion"].toString(),
+                          nombre: "Nombre: "+jsonData[index]["nombre"].toString(),
+                          edad: "Edad: "+jsonData[index]["edad"].toString(),
+                          altura: "Altura: "+jsonData[index]["altura"].toString(),
+                          genero: "Genero: "+jsonData[index]["genero"].toString(),
                         )
                       ],
                     ),
@@ -72,70 +68,70 @@ class _HomepageState extends State<Homepage> {
   }
 }
 
-class _heroesDescripcion extends StatelessWidget {
-  const _heroesDescripcion({
-    Key? key,
-    this.Nombre,
-    this.identidadSecreta,
-    this.descripcion,
-  }) : super(key: key);
-  final String? Nombre;
-  final String? identidadSecreta;
-  final String? descripcion;
+class _heroes extends StatelessWidget {
+  const _heroes({Key? key, this.nombre, this.edad, this.altura, this.genero})
+      : super(key: key);
+  final String? nombre;
+  final String? edad;
+  final String? altura;
+  final String? genero;
 
   @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
+  Widget build(BuildContext) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Expanded(
-          flex: 1,
-          child: Column(
-            children: <Widget>[
-              Text(
-                Nombre!,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
+            flex: 1,
+            child: Column(
+              children: <Widget>[
+                Text(
+                  nombre!,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              const Padding(padding: EdgeInsets.only(bottom: 2.0)),
-              Text(
-                identidadSecreta!,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 12.0,
-                  color: Colors.pinkAccent,
+                Text(
+                  genero!,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12.0,
+                      color: Colors.lightBlue),
                 ),
-              ),
-              const Padding(padding: EdgeInsets.only(bottom: 2.0)),
-            ],
-          ),
-        ),
+                const Padding(padding: EdgeInsets.only(bottom: 2.0)),
+              ],
+            )),
         Expanded(
-          flex: 1,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
-              Text(
-                descripcion!,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                  fontSize: 12.0,
-                  color: Colors.blueGrey,
-                  fontWeight: FontWeight.bold,
+            flex: 1,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Text(
+                  edad!,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12.0,
+                      color: Colors.lightBlue),
                 ),
-              ),
-              const Padding(padding: EdgeInsets.only(bottom: 2.0)),
-            ],
-          ),
-        )
+                Text(
+                  altura!,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12.0,
+                      color: Colors.lightBlue),
+                ),
+                const Padding(padding: EdgeInsets.only(bottom: 2.0)),
+              ],
+            ))
       ],
     );
   }
@@ -143,39 +139,37 @@ class _heroesDescripcion extends StatelessWidget {
 
 class CustomList extends StatelessWidget {
   const CustomList(
-      {Key? key,
-        this.Nombre,
-        this.identidadSecreta,
-        this.descripcion,
-        this.imagen})
+      {Key? key, this.nombre, this.edad, this.altura, this.genero, this.foto})
       : super(key: key);
-  final String? Nombre;
-  final String? identidadSecreta;
-  final String? descripcion;
-  final Widget? imagen;
+  final String? nombre;
+  final String? edad;
+  final String? altura;
+  final String? genero;
+  final Widget? foto;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 10.0),
       child: SizedBox(
-        height: 100,
+        height: 75,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             AspectRatio(
               aspectRatio: 1.0,
-              child: imagen,
+              child: foto,
             ),
             Expanded(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(20.0, 0.0, 2.0, 0.0),
-                  child: _heroesDescripcion(
-                    Nombre: Nombre,
-                    identidadSecreta: identidadSecreta,
-                    descripcion: descripcion,
-                  ),
-                ))
+              padding: EdgeInsets.fromLTRB(20.0, 0.0, 2.0, 0.0),
+              child: _heroes(
+                nombre: nombre,
+                edad: edad,
+                altura: altura,
+                genero: genero,
+              ),
+            ))
           ],
         ),
       ),
@@ -183,7 +177,7 @@ class CustomList extends StatelessWidget {
   }
 }
 
-Widget circular(String url) {
+Widget circleading(String url) {
   return ListTile(
     leading: CircleAvatar(
       backgroundImage: NetworkImage(url),

@@ -1,4 +1,4 @@
-package com.example.ai8
+package com.example.ai8_luis
 
 import io.flutter.embedding.android.FlutterActivity
 
